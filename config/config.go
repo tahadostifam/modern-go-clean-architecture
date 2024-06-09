@@ -55,22 +55,8 @@ func NewConfig() {
 	}
 
 	var cfg Config
-
-	cfg.Server.Port = k.String("server.Port")
-	cfg.Mongo.Host = k.String("mongo.Host")
-	cfg.Mongo.Username = k.String("mongo.Username")
-	cfg.Mongo.Password = k.String("mongo.Pssword")
-	cfg.Mongo.DBname = k.String("mongo.DBname")
-	cfg.Mongo.Port = k.String("mongo.Port")
-	cfg.Jwt.Secret = k.String("jwt.Secret")
-	cfg.Redis.Host = k.String("redis.Host")
-	cfg.Redis.Port = k.String("redis.Port")
-	cfg.Redis.DBname = k.Int("redis.DBname")
-	cfg.Redis.Protocol = k.Int("redis.Protocol")
-	cfg.Redis.Username = k.String("redis.Username")
-	cfg.Redis.Password = k.String("redis.Pssword")
-	cfg.Logger.Level = k.String("logger.Level")
-	cfg.Logger.LogFilePath = k.String("logger.LogFilePath")
-	cfg.Logger.Encoding = k.String("logger.Encoding")
+	if err := k.Unmarshal("", &cfg); err != nil {
+		log.Fatalln(err)
+	}
 	Cfg = cfg
 }
