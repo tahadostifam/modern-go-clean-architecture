@@ -20,7 +20,7 @@ func NewUserRedisRepository()*UserRedisRepository{
 	}
 }
 //just for ensure
-var _UserRedisRepository repository.UserCacheRepository = NewUserRedisRepository()
+var _UserRedisRepository repository.UserRedisRepository = NewUserRedisRepository()
 func (ur *UserRedisRepository) GetById(id string) (map[string]string, error) {
 	exists := ur.RCli.Exists(context.Background(), fmt.Sprintf("user:%s", id))
 	if exists.Val() == 0 {
