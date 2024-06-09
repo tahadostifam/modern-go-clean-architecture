@@ -3,6 +3,7 @@ package repository_mongo
 import (
 	"context"
 
+	"github.com/tahadostifam/modern-go-clean-architecture/config"
 	mongoDB "github.com/tahadostifam/modern-go-clean-architecture/database/mongo"
 	"github.com/tahadostifam/modern-go-clean-architecture/internal/model"
 	"github.com/tahadostifam/modern-go-clean-architecture/internal/repository"
@@ -17,8 +18,7 @@ type UserMongoRepository struct {
 
 func NewUserMongoRepository() *UserMongoRepository {
 	return &UserMongoRepository{
-		//TODO:get database name and collection names from configs
-		Users: mongoDB.NewMongoConnection().Database("mydb").Collection("users"),
+		Users: mongoDB.NewMongoConnection().Database(config.Cfg.Mongo.DBname).Collection("users"),
 	}
 }
 
