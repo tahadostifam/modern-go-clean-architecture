@@ -1,4 +1,4 @@
-package redisDB
+package db_redis
 
 import (
 	"context"
@@ -10,25 +10,27 @@ import (
 )
 
 var (
-	Mu  = &sync.Mutex{}
-	RDB *redis.Client
+	singleton   = &sync.Mutex{}
+	redisClient *redis.Client
 )
 
-func NewRedisConnection() *redis.Client {
-	if RDB == nil {
-		Mu.Lock()
-		defer Mu.Unlock()
-		RDB := redis.NewClient(&redis.Options{
-			Addr:     config.Cfg.Redis.Host + ":" + config.Cfg.Redis.Port,
-			Username: config.Cfg.Redis.Username,
-			Password: config.Cfg.Redis.Password,
-			DB:       config.Cfg.Redis.DBname,
-			Protocol: config.Cfg.Redis.Protocol,
+func GetRedisInstance(config *config.RedisConfig) *redis.Client {
+	if redisClient == nil {
+		singleton.Lock()
+		defer singleton.Unlock()
+
+		redisClient = redis.NewClient(&redis.Options{
+			Addr:     config.Host + ":" + config.Port,
+			Username: config.Username,
+			Password: config.Password,
+			DB:       config.DBname,
+			Protocol: config.Protocol,
 		})
-		err := RDB.Ping(context.Background())
+		err := redisClient.Ping(context.Background())
 		if err != nil {
 			log.Fatal(err)
 		}
 	}
-	return RDB
+
+	return redisClient
 }
