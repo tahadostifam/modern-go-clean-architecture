@@ -13,9 +13,3 @@ type UserRepository interface {
 	DeleteById(ctx context.Context, id string) error
 	// Additional methods related to users...
 }
-type UserRedisRepository interface {
-	GetById(id string) (map[string]string, error)
-	Create(user model.User) error
-	DeleteById(id string) error
-	// Additional methods related to users...
-}

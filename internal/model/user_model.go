@@ -3,7 +3,7 @@ package model
 import "time"
 
 type User struct {
-	ID           int    `bson:"_id"`
+	ID           int       `bson:"_id"`
 	First_name   string    `bson:"first_name"`
 	Last_name    string    `bson:"last_name"`
 	Username     string    `bson:"username" unique:"true"`
@@ -24,4 +24,3 @@ func NewUserModel(firstName, lastName, username, password, phoneNumber, email st
 		Email:        email,
 	}
 }
-
