@@ -1,5 +1,5 @@
 server:
-  Port: 8090
+  Port: 8000
 mongo:
   Port: 27017
   Host: localhost
@@ -13,9 +13,9 @@ redis:
   Host: localhost
   Username: ""
   Password: ""
-  DBname:       0
+  DBname: 0
   Protocol: 3
 logger:
-  LogFilePath: ../logs/log.log   
+  LogFilePath: ../logs/log.log
   Level: debug
   Encoding: json

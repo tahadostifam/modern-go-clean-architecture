@@ -44,19 +44,24 @@ type (
 	}
 )
 
-var Cfg = Config{}
+var localConfig *Config = nil
 
-func NewConfig() {
+func Read() *Config {
+	if localConfig != nil {
+		return localConfig
+	}
 
 	k := koanf.New(".")
-
 	if err := k.Load(file.Provider("config.yaml"), yaml.Parser()); err != nil {
 		log.Fatal(err)
 	}
 
-	var cfg Config
-	if err := k.Unmarshal("", &cfg); err != nil {
+	var config Config
+	if err := k.Unmarshal("", &config); err != nil {
 		log.Fatalln(err)
 	}
-	Cfg = cfg
+
+	localConfig = &config
+
+	return &config
 }
