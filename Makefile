@@ -1,6 +1,7 @@
 # Install development tools (golangci-lint, gofumpt)
 devtools:
 	@echo "Installing devtools"
+	go install go.uber.org/mock/mockgen@latest
 	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.57.1
 	go install mvdan.cc/gofumpt@latest
 
