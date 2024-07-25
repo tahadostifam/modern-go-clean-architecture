@@ -1,0 +1,257 @@
+repo_name: tahadostifam/modern-go-clean-architecture
+report_id: 96333204a54c05cf2298df804c3fd716
+version: 0.1
+repo_type: Public
+timestamp: '2024-07-25T21:37:10+00:00'
+requested_by: tahadostifam
+provider: github
+branch: main
+detected_tools_count: 18
+tools:
+- name: Golang
+  description: An open source programming language that makes it easy to build simple,
+    reliable, and efficient software
+  website_url: http://golang.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture
+  detection_source: Repo Metadata
+- name: MongoDB
+  description: The database for giant ideas
+  website_url: http://www.mongodb.com/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1030/leaf-360x360.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/database/mongo/mongo.go
+  detection_source: database/mongo/mongo.go
+  last_updated_by: "[ Taha. Dostifam‍ ]"
+  last_updated_on: 2024-06-10 18:04:20.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/.github/workflows/go.yml
+  detection_source: ".github/workflows/go.yml"
+  last_updated_by: "[ Taha. Dostifam‍ ]"
+  last_updated_on: 2024-06-10 18:14:26.000000000 Z
+- name: Testify
+  description: A toolkit with common assertions and mocks that plays nicely with the
+    standard library
+  website_url: https://github.com/stretchr/testify
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Go Testing
+  image_url: https://img.stackshare.io/service/8695/stretchr.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.mod
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 11:27:42.000000000 Z
+- name: Shell
+  description: A shell is a text-based terminal, used for manipulating programs and
+    files. Shell scripts typically manage program execution.
+  website_url: https://en.wikipedia.org/wiki/Shell_script
+  open_source: false
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture
+  detection_source: Repo Metadata
+- name: crypto
+  description: Go supplementary cryptography libraries
+  package_url: https://pkg.go.dev/golang.org/x/crypto
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:13:26.000000000 Z
+  vulnerabilities:
+  - name: Improper Verification of Cryptographic Signature in golang.org/x/crypto
+    cve_id: CVE-2020-9283
+    cve_url: https://github.com/advisories/GHSA-ffhg-7mh4-33c4
+    detected_date: Aug 22
+    severity: moderate
+    first_patched: 0.0.0-20200220183623-bac4c82f6975
+- name: compress
+  description: Optimized compression packages
+  package_url: https://pkg.go.dev/github.com/klauspost/compress
+  version: 1.13.6
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:13:26.000000000 Z
+- name: copystructure
+  description: Go
+  package_url: https://pkg.go.dev/github.com/mitchellh/copystructure
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:52:48.000000000 Z
+- name: fsnotify
+  description: Cross-platform file system notifications for Go
+  package_url: https://pkg.go.dev/github.com/fsnotify/fsnotify
+  version: 1.4.9
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 11:27:42.000000000 Z
+- name: go-difflib
+  description: Partial port of Python difflib package to Go
+  package_url: https://pkg.go.dev/github.com/pmezard/go-difflib
+  version: 1.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: "[ Taha. Dostifam‍ ]"
+  last_updated_on: 2024-06-10 18:14:26.000000000 Z
+- name: go-spew
+  description: Implements a deep pretty printer for Go data structures to aid in debugging
+  package_url: https://pkg.go.dev/github.com/davecgh/go-spew
+  version: 1.1.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 11:27:42.000000000 Z
+- name: mapstructure
+  description: Go library for decoding generic map values into native Go structures
+  package_url: https://pkg.go.dev/github.com/mitchellh/mapstructure
+  version: 0.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:52:48.000000000 Z
+- name: montanaflynn/stats
+  description: A statistics package with common functions that are missing from the
+    Golang standard library
+  package_url: https://pkg.go.dev/github.com/montanaflynn/stats
+  version: 0.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:13:26.000000000 Z
+- name: reflectwalk
+  description: Reflectwalk is a Go library for "walking" complex structures
+  package_url: https://pkg.go.dev/github.com/mitchellh/reflectwalk
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:52:48.000000000 Z
+- name: snappy
+  description: The Snappy compression format in the Go programming language
+  package_url: https://pkg.go.dev/github.com/golang/snappy
+  version: 0.0.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:13:26.000000000 Z
+- name: sys
+  description: Go packages for low-level interaction with the operating system
+  package_url: https://pkg.go.dev/golang.org/x/sys
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: "[ Taha. Dostifam‍ ]"
+  last_updated_on: 2024-06-07 23:12:39.000000000 Z
+- name: text
+  description: Go text processing support
+  package_url: https://pkg.go.dev/golang.org/x/text
+  version: 0.3.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/tahadostifam/modern-go-clean-architecture/blob/main/go.sum
+  detection_source: go.mod
+  last_updated_by: Amir
+  last_updated_on: 2024-06-09 03:13:26.000000000 Z
