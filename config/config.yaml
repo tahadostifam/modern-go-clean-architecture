@@ -1,0 +1,21 @@
+server:
+  Port: 8000
+mongo:
+  Port: 27017
+  Host: localhost
+  Username: root
+  Password: password
+  DBname: mydb
+jwt:
+  Secret: mysecretkey
+redis:
+  Port: 6379
+  Host: localhost
+  Username: ""
+  Password: ""
+  DBname: 0
+  Protocol: 3
+logger:
+  LogFilePath: ../logs/log.log
+  Level: debug
+  Encoding: json
