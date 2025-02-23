@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  db: 
+    image: postgres:17-alpine
+    container_name: ultexpark_postgresqb
+    restart: always  
+    environment:
+      POSTGRES_USER: production_user 
+      POSTGRES_PASSWORD: secure_password 
+      POSTGRES_DB: ultexparkdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+    ports:
+      - "5432:5432"  
+    networks:
+      - default_network
+  app:
+    network_mode: host
+    container_name: "ultexpark_backend"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+
+networks:
+  default_network:
+    driver: "bridge"
+    name: "ultexpark_backend_default_network"
